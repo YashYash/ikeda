@@ -71,11 +71,11 @@
   padding: 40px 0 0 20px;
   width: 85%;
   opacity: 0.1;
-  -webkit-transform: scale(0.7, 0.7);
+/*  -webkit-transform: scale(0.7, 0.7);
   -moz-transform: scale(0.7, 0.7);
   -ms-transform: scale(0.7, 0.7);
   -o-transform: scale(0.7, 0.7);
-  transform: scale(0.7, 0.7);
+  transform: scale(0.7, 0.7);*/
   -webkit-transition: 0.4s;
   -moz-transition: 0.4s;
   -ms-transition: 0.4s;
@@ -84,11 +84,11 @@
 }
 
 .landing-content .track.visible {
-  -webkit-transform: scale(1, 1);
+/*  -webkit-transform: scale(1, 1);
   -moz-transform: scale(1, 1);
   -ms-transform: scale(1, 1);
   -o-transform: scale(1, 1);
-  transform: scale(1, 1);	
+  transform: scale(1, 1);	*/
   opacity: 1;
 }
 
