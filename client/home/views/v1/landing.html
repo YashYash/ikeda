@@ -4,6 +4,7 @@
     <div class="blurred-image" style="background: url({{getState('LandingController').currentTrack.background}})">
     </div>
     <div id="slider-container">
+    	<p class="swipe-text" ng-class="{'show': (!trackVisibility)}">SWIPE THROUGH MY TRACKS</p>
       <div id="slider-inner-container">
         <div id="slides-inner-container">
           <ion-slide-box on-slide-changed="slideHasChanged($index)" delegate-handle="stateSlides"on-drag="dragging()" on-release="dragReleased()">
