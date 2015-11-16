@@ -1,0 +1,39 @@
+doctype html
+html(ng-app="app")
+  head
+    meta(charset='utf-8')
+    meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1, minimal-ui, user-scalable=0")    
+
+    //- Vendor
+    script(src="./vendor/ionic.bundle.min.js")
+    script(src="./vendor/moment.min.js")
+
+    //- Firebase
+    script(src="https://cdn.firebase.com/js/client/2.2.1/firebase.js")
+    script(src="https://cdn.firebase.com/libs/angularfire/1.1.2/angularfire.min.js")
+
+    //- Angular script
+    script(src="./home/javascripts/app.js")
+    script(src="./home/javascripts/services/StateService.js")
+    script(src="./home/javascripts/services/MusicService.js")
+    script(src="./home/javascripts/controllers/GlobalController.js")
+    script(src="./home/javascripts/controllers/ContentController.js")
+    script(src="./home/javascripts/controllers/RootController.js")
+    script(src="./home/javascripts/controllers/landingController.js")
+    script(src="./home/javascripts/controllers/NavController.js")
+    script(src="./home/javascripts/controllers/RootController.js")
+
+    //- Css
+    link(rel="stylesheet" href="./home/css/global.css")
+    link(rel="stylesheet" href="./home/css/animations.css")
+    link(rel="stylesheet" href="./home/css/content.css")
+    link(rel="stylesheet" href="./home/css/nav.css")
+    link(rel="stylesheet" href="./home/css/landing.css")
+
+    //- Fonts
+    link(href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet')
+    link(href="https://fontastic.s3.amazonaws.com/ajkCKZcprWV8fCCd7UykoN/icons.css" rel="stylesheet")
+
+    title= IKEDA      
+
+  body(ui-view="global")
