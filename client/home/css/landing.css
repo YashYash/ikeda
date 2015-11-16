@@ -43,11 +43,6 @@
   -ms-transition: 0.7s;
   -o-transition: 0.7s;
   transition: 0.7s;
-  /*  -webkit-animation: panorama 30s infinite;
-  -moz-animation: panorama 30s infinite;
-  -ms-animation: panorama 30s infinite;
-  -o-animation: panorama 30s infinite;
-  animation: panorama 30s infinite;*/
   -webkit-filter: blur(5px);
   -moz-filter: blur(5px);
   -ms-filter: blur(5px);
@@ -71,11 +66,6 @@
   padding: 40px 0 0 20px;
   width: 85%;
   opacity: 0.1;
-/*  -webkit-transform: scale(0.7, 0.7);
-  -moz-transform: scale(0.7, 0.7);
-  -ms-transform: scale(0.7, 0.7);
-  -o-transform: scale(0.7, 0.7);
-  transform: scale(0.7, 0.7);*/
   -webkit-transition: 0.4s;
   -moz-transition: 0.4s;
   -ms-transition: 0.4s;
@@ -84,11 +74,6 @@
 }
 
 .landing-content .track.visible {
-/*  -webkit-transform: scale(1, 1);
-  -moz-transform: scale(1, 1);
-  -ms-transform: scale(1, 1);
-  -o-transform: scale(1, 1);
-  transform: scale(1, 1);	*/
   opacity: 1;
 }
 
@@ -115,4 +100,46 @@
   border: none;
   box-shadow: 0 0 28px black;
   margin-top: 25px;
+}
+
+@media(min-width:1024px) {
+  .landing-content > .background-container > .blurred-image {
+    -webkit-animation: panorama 30s infinite;
+    -moz-animation: panorama 30s infinite;
+    -ms-animation: panorama 30s infinite;
+    -o-animation: panorama 30s infinite;
+    animation: panorama 30s infinite;
+  }
+  .landing-content .track {
+    padding: 0;
+    width: 700px;
+    left: 0;
+    right: 0;
+    height: 400px;
+    -webkit-transform: scale(0.7, 0.7);
+    -moz-transform: scale(0.7, 0.7);
+    -ms-transform: scale(0.7, 0.7);
+    -o-transform: scale(0.7, 0.7);
+    transform: scale(0.7, 0.7);
+  }
+  .landing-content .track.visible {
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+  .landing-content .track > .name {
+    margin: 0;
+    color: white;
+    font-weight: 700;
+    font-size: 50px;
+  }
+  .landing-content .track > .description {
+    margin: 0;
+    color: white;
+  }
+  .landing-content .track > iframe {
+    height: 194px;
+  }
 }

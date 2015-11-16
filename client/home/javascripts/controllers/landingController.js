@@ -41,23 +41,41 @@ app.controller('LandingController', [
     };
 
     $scope.slideHasChanged = function(index) {
-    	$timeout(function() {
-    		MusicService.setCurrentTrack(index);
-    	}, 500);
+      $timeout(function() {
+        MusicService.setCurrentTrack(index);
+      }, 500);
     };
     $scope.dragging = function(e) {
-    	$scope.trackVisibility = false;
+      $scope.trackVisibility = false;
     };
     $scope.dragReleased = function() {
-    	$scope.trackVisibility = true;
+      $scope.trackVisibility = true;
     };
     $scope.nextTrack = function() {
-      $scope.currentTrackIndex = $scope.currentTrackIndex + 1;
-      MusicService.setCurrentTrack($scope.currentTrackIndex);
+      $timeout(function() {
+        $scope.trackVisibility = false;
+        $timeout(function() {
+          $scope.currentTrackIndex = $scope.currentTrackIndex + 1;
+          MusicService.setCurrentTrack($scope.currentTrackIndex);
+          $ionicSlideBoxDelegate.next();
+          $timeout(function() {
+            $scope.trackVisibility = true;
+          }, 50);
+        }, 400);
+      });
     };
     $scope.prevTrack = function() {
-      $scope.currentTrackIndex = $scope.currentTrackIndex - 1;
-      MusicService.setCurrentTrack($scope.currentTrackIndex);
+      $timeout(function() {
+        $scope.trackVisibility = false;
+        $timeout(function() {
+          $scope.currentTrackIndex = $scope.currentTrackIndex - 1;
+          MusicService.setCurrentTrack($scope.currentTrackIndex);
+          $ionicSlideBoxDelegate.previous();
+          $timeout(function() {
+            $scope.trackVisibility = true;
+          }, 50);
+        }, 400);
+      });
     };
   }
 ]);
