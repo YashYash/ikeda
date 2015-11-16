@@ -6,11 +6,17 @@
     <div id="slider-container">
       <div id="slider-inner-container">
         <div id="slides-inner-container">
-          <ion-slide-box on-slide-changed="slideHasChanged($index)" delegate-handle="stateSlides"on-drag="dragging()" on-release="dragReleased()">
+          <div class="buttons-container">
+            <div class="buttons">
+              <button ng-click="prevTrack()">PREV</button>
+              <button ng-click="nextTrack()">NEXT</button>
+            </div>
+          </div>
+          <ion-slide-box on-slide-changed="slideHasChanged($index)" delegate-handle="stateSlides" on-drag="dragging()" on-release="dragReleased()">
             <ion-slide ng-repeat="track in getState('LandingController').tracks">
               <div class="track" ng-class="{'visible': (trackVisibility)}">
-                <h1 class="name" ng-click="nextTrack()">{{track.name}}</h1>
-                <p class="description" ng-click="prevTrack()">{{track.description}}</p>
+                <h1 class="name">{{track.name}}</h1>
+                <p class="description">{{track.description}}</p>
                 <iframe src="{{track.embedUrl | trustUrl}}"></iframe>
               </div>
             </ion-slide>

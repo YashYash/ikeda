@@ -52,30 +52,34 @@ app.controller('LandingController', [
       $scope.trackVisibility = true;
     };
     $scope.nextTrack = function() {
-      $timeout(function() {
-        $scope.trackVisibility = false;
+      if ($scope.currentTrackIndex < StateService.data['LandingController'].tracks.length - 1) {
         $timeout(function() {
-          $scope.currentTrackIndex = $scope.currentTrackIndex + 1;
-          MusicService.setCurrentTrack($scope.currentTrackIndex);
-          $ionicSlideBoxDelegate.next();
+          $scope.trackVisibility = false;
           $timeout(function() {
-            $scope.trackVisibility = true;
-          }, 50);
-        }, 400);
-      });
+            $scope.currentTrackIndex = $scope.currentTrackIndex + 1;
+            MusicService.setCurrentTrack($scope.currentTrackIndex);
+            $ionicSlideBoxDelegate.next();
+            $timeout(function() {
+              $scope.trackVisibility = true;
+            }, 50);
+          }, 400);
+        });
+      }
     };
     $scope.prevTrack = function() {
-      $timeout(function() {
-        $scope.trackVisibility = false;
+      if ($scope.currentTrackIndex > 0) {
         $timeout(function() {
-          $scope.currentTrackIndex = $scope.currentTrackIndex - 1;
-          MusicService.setCurrentTrack($scope.currentTrackIndex);
-          $ionicSlideBoxDelegate.previous();
+          $scope.trackVisibility = false;
           $timeout(function() {
-            $scope.trackVisibility = true;
-          }, 50);
-        }, 400);
-      });
+            $scope.currentTrackIndex = $scope.currentTrackIndex - 1;
+            MusicService.setCurrentTrack($scope.currentTrackIndex);
+            $ionicSlideBoxDelegate.previous();
+            $timeout(function() {
+              $scope.trackVisibility = true;
+            }, 50);
+          }, 400);
+        });
+      }
     };
   }
 ]);

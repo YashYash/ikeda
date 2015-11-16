@@ -57,10 +57,11 @@
   z-index: 2;
 }
 
+.landing-content .buttons-container,
 .landing-content .track {
   position: absolute;
   height: 320px;
-  top: 25px;
+  top: 0;
   bottom: 0;
   margin: auto;
   padding: 40px 0 0 20px;
@@ -71,6 +72,47 @@
   -ms-transition: 0.4s;
   -o-transition: 0.4s;
   transition: 0.4s;
+}
+
+.landing-content .buttons-container {
+  padding: 0;
+  display: none;
+  width: 700px;
+  height: 400px;
+  left: 0;
+  opacity: 1;
+  right: 0;
+}
+
+.landing-content .buttons-container > .buttons {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: -35px;
+  color: white;
+  z-index: 1;
+}
+
+.landing-content .buttons-container > .buttons > button {
+  background: none;
+  border: none;
+  outline: 0;
+  width: 150px;
+  color: white;
+  font-weight: 600;
+  border: 1px solid white;
+  margin: 0 10px;
+  height: 35px;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.landing-content .buttons-container > .buttons > button:hover {
+  background: rgba(238, 238, 238, 0.1);
 }
 
 .landing-content .track.visible {
@@ -109,6 +151,9 @@
     -ms-animation: panorama 30s infinite;
     -o-animation: panorama 30s infinite;
     animation: panorama 30s infinite;
+  }
+  .landing-content .buttons-container {
+    display: block;
   }
   .landing-content .track {
     padding: 0;
