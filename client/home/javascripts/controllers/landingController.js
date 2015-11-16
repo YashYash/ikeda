@@ -45,12 +45,12 @@ app.controller('LandingController', [
     		MusicService.setCurrentTrack(index);
     	}, 500);
     };
-    // $scope.dragging = function(e) {
-    // 	$scope.trackVisibility = false;
-    // };
-    // $scope.dragReleased = function() {
-    // 	$scope.trackVisibility = true;
-    // };
+    $scope.dragging = function(e) {
+    	$scope.trackVisibility = false;
+    };
+    $scope.dragReleased = function() {
+    	$scope.trackVisibility = true;
+    };
     $scope.nextTrack = function() {
       $scope.currentTrackIndex = $scope.currentTrackIndex + 1;
       MusicService.setCurrentTrack($scope.currentTrackIndex);
