@@ -120,9 +120,8 @@
 }
 
 .landing-content .track > iframe {
-  width: calc(100% - 20px);
+  width: 100%;
   border: none;
   box-shadow: 0 0 28px black;
-  border: 10px solid rgba(238, 238, 238, 0.1);
   margin-top: 25px;
 }
