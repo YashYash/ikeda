@@ -12,7 +12,7 @@
               <div class="track" ng-class="{'visible': (trackVisibility)}">
                 <h1 class="name">{{track.name}}</h1>
                 <p class="description">{{track.description}}</p>
-                <iframe src="{{getTrackUrl()}}"></iframe>
+                <iframe src="{{track.embedUrl | trustUrl}}"></iframe>
               </div>
             </ion-slide>
           </ion-slide-box>

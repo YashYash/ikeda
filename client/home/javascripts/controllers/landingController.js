@@ -45,18 +45,12 @@ app.controller('LandingController', [
     		MusicService.setCurrentTrack(index);
     	}, 500);
     };
-
-    $scope.getTrackUrl = function(url) {
-    	var url = StateService.data['LandingController'].currentTrack.embedUrl;
-    	return $sce.trustAsResourceUrl(url);
-    };
-
     $scope.dragging = function(e) {
     	$scope.trackVisibility = false;
     };
     $scope.dragReleased = function() {
     	$scope.trackVisibility = true;
-    }
+    };
     $scope.nextTrack = function() {
       $scope.currentTrackIndex = $scope.currentTrackIndex + 1;
       MusicService.setCurrentTrack($scope.currentTrackIndex);
@@ -64,10 +58,6 @@ app.controller('LandingController', [
     $scope.prevTrack = function() {
       $scope.currentTrackIndex = $scope.currentTrackIndex - 1;
       MusicService.setCurrentTrack($scope.currentTrackIndex);
-    }
-
-    $timeout(function() {
-      console.log(StateService.data);
-    }, 5000);
+    };
   }
 ]);
