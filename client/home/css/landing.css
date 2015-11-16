@@ -136,8 +136,7 @@
     font-size: 50px;
   }
   .landing-content .track > .description {
-    margin: 0;
-    color: white;
+    font-size: 15px;
   }
   .landing-content .track > iframe {
     height: 194px;
