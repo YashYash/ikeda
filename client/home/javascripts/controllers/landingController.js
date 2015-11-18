@@ -31,6 +31,13 @@ app.controller('LandingController', [
       $scope.trackVisibility = true;
     });
 
+    $timeout(function() {
+      $scope.showContent = true;
+      console.log("#### SHOWING CONTENT");
+      $timeout(function() {
+        $scope.fadeInContent = true;
+      }, 400);
+    }, 2000);
     /**
      * UI-responders
      */

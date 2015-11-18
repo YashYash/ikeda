@@ -6,9 +6,16 @@ app.service('StateService', [function() {
     "LandingController": {
       "isLoaded": false,
       "tracks": [],
-      "currentTrack": {}
+      "currentTrack": {},
+      "showOverlay": false,
+      "fadeinOverlay": false,
+      "showLogo": false,
+      "showContent": false
     },
-    "NavController": {}
+    "NavController": {
+      "aboutClicked": false,
+      "contactClicked": false
+    }
   }
 
 

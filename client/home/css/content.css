@@ -1,7 +1,268 @@
+/* Content Overlay */
+
+.content-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(1, 1, 1, 0);
+  display: none;
+  z-index: 10;
+  overflow: scroll;
+}
+
+.content-overlay::-webkit-scrollbar {
+  display: none;
+}
+
+.content-overlay.show-overlay {
+  display: block;
+}
+
+.content-overlay.fadein-overlay {
+  background: rgba(1, 1, 1, 0.9);
+}
+
+.content-overlay > .about {
+  position: relative;
+  height: auto;
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  min-height: 100%;
+  margin: auto;
+  overflow: hidden;
+  background: black;
+  opacity: 0;
+	-webkit-transition:0.4s;
+	-moz-transition:0.4s;
+	-ms-transition:0.4s;
+	-o-transition:0.4s;
+	transition:0.4s;	  
+}
+.content-overlay > .about.fade-in {
+	opacity: 1;
+}
+
+.content-overlay > .about > .close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 5;
+  font-size: 20px;
+  padding: 20px;
+  color: white;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.content-overlay > .about > .close:hover {
+  -webkit-transform: scale(1.5, 1.5);
+  -moz-transform: scale(1.5, 1.5);
+  -ms-transform: scale(1.5, 1.5);
+  -o-transform: scale(1.5, 1.5);
+  transform: scale(1.5, 1.5);
+}
+.content-overlay > .about > .content-container {
+	background:black;
+}
+.content-overlay > .about > .content-container > .gradient {
+  position: absolute;
+  top: -200px;
+  left: 0;
+  width: 100%;
+  height: calc(100% + 200px);
+  z-index: 1;
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(247, 247, 247, 0) 3%, rgba(229, 229, 229, 0) 10%, rgba(0, 0, 0, 1) 100%);
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(247, 247, 247, 0) 3%, rgba(229, 229, 229, 0) 10%, rgba(0, 0, 0, 1) 100%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(247, 247, 247, 0) 3%, rgba(229, 229, 229, 0) 10%, rgba(0, 0, 0, 1) 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#000000', GradientType=0);
+}
+
+.content-overlay > .about > .content-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.content-overlay > .about > .content-container > .blurred-image {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  right:0;
+  margin:auto;
+  width: 90%;
+  height: 80%;
+  background-size: cover !important;
+  background-position: center !important;
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  -ms-filter: blur(10px);
+  -o-filter: blur(10px);
+  filter: blur(10px);
+}
+
+.content-overlay > .about > .content-container > .image {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  background-size: cover !important;
+  background-position: center !important;
+  margin: auto;
+  border: 5px solid rgba(238, 238, 238, 0.1);
+  border-radius: 100%;
+  margin-top: 70px;
+  background-clip: padding-box !important;
+  box-shadow: 0 0 50px black;
+  -webkit-transform: translateY(-10px);
+  -moz-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
+  -o-transform: translateY(-10px);
+  transform: translateY(-10px);
+  opacity: 0;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.content-overlay > .about > .content-container > .image.show-image {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.content-overlay > .about > .content-container > .content {
+  position: relative;
+  color: white;
+  text-align: center;
+  z-index: 2;
+  font-weight: 100;
+  padding: 20px 30px;
+  opacity: 0;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  -webkit-transform: translateY(-10px);
+  -moz-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
+  -o-transform: translateY(-10px);
+  transform: translateY(-10px);
+}
+
+.content-overlay > .about > .content-container > .content.show-content {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+/* Loading Page */
+
+.page-load-message {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.page-load-message > .background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover !important;
+  background-position: center;
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  -ms-filter: blur(10px);
+  -o-filter: blur(10px);
+  filter: blur(10px);
+}
+
+.page-load-message > .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0.95;
+  z-index: 1;
+}
+
+.page-load-message > .spinner {
+  fill: white;
+  stroke: white;
+  z-index: 1;
+  position: fixed;
+}
+
+.page-load-message > .spinner svg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  color: white;
+  width: 120px;
+  height: 120px;
+}
+
+
+/* Content Container  */
+
 .content-container {
-	position: fixed;
-	top:0;
-	left:0;
-	width:100%;
-	height:100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: 0.1s;
+  -moz-transition: 0.1s;
+  -ms-transition: 0.1s;
+  -o-transition: 0.1s;
+  transition: 0.1s;
+}
+
+@media(min-width:1024px) {
+  .content-overlay > .about > .content-container > .blurred-image {
+    top: -200px;
+  }
+  .content-overlay > .about > .gradient {
+    height: 100%;
+  }
+  .content-overlay > .about > .content-container > .image {
+    width: 180px;
+    height: 180px;
+  }
+  .content-overlay > .about > .content-container > .content {
+    padding: 40px;
+  }
+  .content-container.blur-container {
+    width: 110%;
+    left: -5%;
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -ms-filter: blur(2px);
+    -o-filter: blur(2px);
+    filter: blur(2px);
+  }
 }

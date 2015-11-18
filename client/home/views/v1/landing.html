@@ -1,4 +1,4 @@
-<div class="landing-content">
+<div class="landing-content" ng-class="{'fadein-content': (fadeInContent)}">
   <div class="background-container">
     <div class="overlay"></div>
     <div class="blurred-image" style="background: url({{getState('LandingController').currentTrack.background}})">
@@ -8,8 +8,8 @@
         <div id="slides-inner-container">
           <div class="buttons-container">
             <div class="buttons">
-              <button ng-click="prevTrack()">PREV</button>
-              <button ng-click="nextTrack()">NEXT</button>
+              <span ng-click="prevTrack()" class="icon-left-circled left"></span>
+              <span ng-click="nextTrack()" class="icon-right-circled right"></span>
             </div>
           </div>
           <ion-slide-box on-slide-changed="slideHasChanged($index)" delegate-handle="stateSlides" on-drag="dragging()" on-release="dragReleased()">
