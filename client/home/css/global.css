@@ -1,6 +1,9 @@
 body, input, button, textarea, h1, h2, h3, p {
 	font-family: 'Open Sans', sans-serif !important;
 }
+body{
+  background:black;
+}
 a {
   text-decoration: none;
   color: #75cfea;
