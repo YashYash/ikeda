@@ -33,11 +33,15 @@
   letter-spacing: 0.05em;
   font-weight: 100;
 }
+
 .landing-content > .swipe-message > p > span {
   vertical-align: middle;
-  font-size:20px;
-  margin:0 10px;
+  font-size: 25px;
+  margin: 0 10px;
+  position: relative;
+  bottom: 2px;
 }
+
 
 /* Background Image */
 
