@@ -187,6 +187,9 @@
 }
 
 @media(min-width:1024px) {
+  .landing-content > .swipe-message {
+    display: none;
+  }
   .landing-content > .background-container > .blurred-image {
     -webkit-animation: panorama 30s infinite;
     -moz-animation: panorama 30s infinite;
