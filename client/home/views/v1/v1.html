@@ -1,21 +1,10 @@
 <div ui-view="nav"></div>
 
-<div class="content-overlay" ng-class="{'show-overlay': (stateData('LandingController').showOverlay), 'fadein-overlay': (stateData('LandingController').fadeinOverlay)}">
-  <div class="about" ng-class="{'fade-in':(stateData('LandingController').showLogo)}">
-  	<span class="icon-cross-1 close" ng-click="hideOverlay()"></span>
-    <div class="content-container">
-      <div class="gradient"></div>
-      <div class="blurred-image" style="background:url('{{images.coverImage}}')"></div>
-      <div class="image" style="background:url('{{images.profileImage}}')" ng-class="{'show-image': (stateData('LandingController').showLogo)}"></div>
-      <div class="content" ng-class="{'show-content': (stateData('LandingController').showContent)}">
-        <p>{{text.description}}</p>
-      </div>
-    </div>
-  </div>
-</div>
 <div class="page-load-message">
   <div class="background-image" style="background:url('{{images.loadingBackground}}')"></div>
   <div class="overlay"></div>
   <ion-spinner icon="ripple"></ion-spinner>
 </div>
+
+
 <div ui-view="content" class="content-container"></div>

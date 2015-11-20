@@ -33,7 +33,6 @@ app.controller('LandingController', [
 
     $timeout(function() {
       $scope.showContent = true;
-      console.log("#### SHOWING CONTENT");
       $timeout(function() {
         $scope.fadeInContent = true;
       }, 400);

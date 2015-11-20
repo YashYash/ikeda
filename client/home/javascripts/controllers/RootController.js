@@ -17,8 +17,8 @@ app.controller('RootController', [
      * Init
      */
 
-    var textRef = new Firebase("https://ikdea.firebaseio.com/text");
-    var imagesRef = new Firebase("https://ikdea.firebaseio.com/images");
+    var textRef = new Firebase("https://pheir.firebaseio.com//text");
+    var imagesRef = new Firebase("https://pheir.firebaseio.com//images");
     $scope.text = $firebaseObject(textRef);
     $scope.images = $firebaseObject(imagesRef);
     console.log($scope.text);  

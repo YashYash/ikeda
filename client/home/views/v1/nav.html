@@ -1,7 +1,26 @@
 <!-- nav.html -->
 <div class="nav-container">
-	<p class="name" ng-class="{'show-name': (showName)}">{{text.name}}</p>
-	<button ng-click="linkClicked('about')" ng-class="{'show-link': (showLinkOne)}">ABOUT</button>
+  <p class="name" ng-class="{'show-name': (showName)}">{{text.name}}</p>
+  <button ng-click="showOverlay()" ng-class="{'show-link': (showLinkOne)}">ABOUT</button>
 </div>
-
-
+<div class="close-icon-container" ng-class="{'show':(fadeInAboutOverlay)}">
+  <span class="icon-plus-icon" ng-click="hideOverlay()"></span>
+</div>
+<div class="about-overlay" ng-class="{'show': (showAboutOverlay), 'fade-in': (fadeInAboutOverlay)}">
+  <div class="overlay-content" ng-class="{'fade-in': (fadeInAboutOverlay)}">
+    <div class="banner" ng-click="chode()">
+      <div class="background-image" style="background: url('{{images.coverImage}}')"></div>
+      <div class="dark-overlay"></div>
+      <div class="gradient"></div>
+      <div class="image" style="background: url('{{images.profileImage}}')"></div>
+    </div>
+    <div class="context">
+      <p class="name">{{text.name}}</p>
+      <div class="line"></div>
+      <p class="description">{{text.description}}</p>
+      <p class="contact">CONTACT</p>
+      <div class="line"></div>
+      <p class="number">{{text.phoneNumber}}</p>
+    </div>
+  </div>
+</div>
